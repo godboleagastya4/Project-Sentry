@@ -225,8 +225,8 @@ m2.metric("Marked for attention", f"{warning_count:,}", help="Count of countries
 max_risk = df["risk_score"].max()
 m3.metric("Highest risk score", f"{max_risk:.1f} / 100" if pd.notna(max_risk) else "—", help="The maximum score in the latest available record for each country. It is not a probability.")
 
-if pd.notna(latest_date) and latest_date < pd.Timestamp.now().normalize() - pd.Timedelta(days=120):
-    st.warning("The risk dataset appears older than four months. The map shows the uploaded data date; it is not a live risk forecast.")
+# if pd.notna(latest_date) and latest_date < pd.Timestamp.now().normalize() - pd.Timedelta(days=120):
+#     st.warning("The risk dataset appears older than four months. The map shows the uploaded data date; it is not a live risk forecast.")
 
 # ---------- Main tabs keep the default screen simple ----------
 overview_tab, country_tab, aid_tab, disaster_tab = st.tabs(["🌍  Global overview", "🔎  Explore a country", "🤝  Humanitarian aid", "🚨  Disaster alerts"])
