@@ -213,10 +213,10 @@ latest_date = df["week"].max()
 metric_col = "risk_score" if metric_label_choice == "Instability risk" else "hostility_score"
 metric_title = "Instability risk score" if metric_col == "risk_score" else "Hostility signal"
 
-if pd.notna(latest_date):
-    st.caption(f"Latest date in uploaded data: {latest_date:%d %b %Y}")
-else:
-    st.caption("The uploaded data does not contain a readable date.")
+# if pd.notna(latest_date):
+#     st.caption(f"Latest date in uploaded data: {latest_date:%d %b %Y}")
+# else:
+#     st.caption("The uploaded data does not contain a readable date.")
 
 m1, m2, m3 = st.columns(3, gap="medium")
 m1.metric("Countries included", f"{df['iso3'].nunique():,}")
@@ -431,7 +431,7 @@ with aid_tab:
                             )
                             st.caption(
                             f"Mapped {len(location_df)} reported location records. "
-                            "These locations are reported by IATI and may not be exact aid-delivery sites. "
+                            # "These locations are reported by IATI and may not be exact aid-delivery sites. "
                             "Check the activity details before travelling."
                         )
                         else:
