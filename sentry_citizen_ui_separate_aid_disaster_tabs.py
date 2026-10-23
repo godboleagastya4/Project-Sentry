@@ -169,7 +169,7 @@ with st.sidebar:
     st.markdown("### Your view")
 
 
-    uploaded = "sentry_dashboard_data.csv"
+    uploaded = "sentry_dashboard_data (1).csv"
     # uploaded = st.file_uploader("Choose risk data (CSV)", type=["csv"], help="The CSV should include iso3, week, risk_score, warning_level and hostility_score.")
     metric_label_choice = st.radio("Colour the map by", ["Instability risk", "Hostility signal"], index=0)
     st.divider()
