@@ -1,5 +1,5 @@
 streamlit
 pandas
-plotly==6.3.0
+plotly
 requests
 pycountry
